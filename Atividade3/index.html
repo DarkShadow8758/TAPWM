@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Design Responsivo</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #444;
+        color: #333;
+    }
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1d1d;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+    nav {
+        background-color: #444;
+        padding: 8px;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 8px;
+    }
+    section {
+        padding: 15px;
+        margin: 15px;
+        background-color: #f3f3f3;   
+    }
+    .container {
+        width: 95%;
+        margin: auto;
+        padding: 2% 3%;
+        }
+    .container img {
+        max-width:400px;
+        max-height:300px;
+        width: auto;
+        height: auto;
+        border-radius: 15px;
+        border-color: #1c1d1d;
+    }
+    body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #1c1d1d;
+    color: #fff;
+}
+
+nav.dark-mode {
+    background-color: #333;
+}
+body.dark-mode section {
+    background-color: #1c1d1d; /* Altere a cor de fundo para o dark mode */
+    color: #fff; /* Altere a cor do texto para o dark mode */
+}
+button {
+    padding: 10px;
+    background-color: #1c1d1d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+    
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>Design Responsivo</h1>
+        <button onclick="modoescuro()">
+            <i class="fas fa-moon"></i> Modo Escuro
+        </button>
+    </header>
+<section>
+    <h2>O que é Design Responsivo?</h2>
+    <p>O Design Responsivo, ou Responsividade é uma abordagem de interface gráfica do usuário, que se adapta de forma fluida a diferentes dispositivos e tamanho de telas. Seu objetivo é melhorar a experiencia do usuário, garantindo um conteúdo legível e funcional em qualquer dispositivo que ele seja acessado.</p>
+    <div class="container">
+    <img src="img/imagem1.jfif">
+    </div>
+    <h2>Conceitos e Técnicas </h2>
+    <h3>1.	Flexibilidade e Adaptabilidade: </h3><p>O design responsivo é flexível e pode se adaptar às características específicas do dispositivo do usuário, como tamanho da tela, orientação e resolução. Isto é conseguido usando técnicas de layout fluido e porcentagens em vez de unidades fixas como pixels.</p>
+    <h3>2.	Grade Fluida: </h3><p>Usar uma grade fluida é a base do design responsivo. Uma grade flexível permite que os elementos da interface sejam redimensionados e reorganizados conforme necessário para se ajustarem ao tamanho da tela do dispositivo.</p>
+    <h3>3.	Imagens Flexíveis: </h3><p>Imagens responsivas são aquelas que conseguem se adaptar ao tamanho da tela do dispositivo sem perder qualidade ou distorcer a proporção. Isso é feito usando unidades de medida relativas (como porcentagens) e definindo o tamanho de imagem apropriado usando CSS.</p>
+    <h3>4.	Media Queries: </h3><p>As media queries são uma técnica do CSS que permite aplicar estilos diferentes com base nas características do dispositivo, como largura de tela, altura de tela, resolução e orientação. As media queries são usadas para ajustar o layout, fontes e outros aspectos visuais para diferentes dispositivos.</p>
+    <h3>5.	Progressive Enhancement: </h3><p>O design responsivo geralmente segue o princípio de “aprimoramento de rolagem”, o que significa que o conteúdo e a funcionalidade básicos devem estar acessíveis em todos os dispositivos, enquanto recursos adicionais e melhorias visuais são aplicados a dispositivos mais poderosos.</p>
+ 
+    <h2>Frameworks e bibliotecas populares para design responsivo incluem:</h2>
+    <h3>1.	Bootstrap: </h3><p>Um dos frameworks mais populares para desenvolvimento web responsivo. Ele fornece uma variedade de componentes e estilos pré-construídos que facilitam a criação de interfaces responsivas e consistentes.</p>
+    <div class="container">
+        <img src="img/imgBootstrap.jfif">
+    </div>
+    <h3>2.	Foundation: <p>Similar ao Bootstrap, é outro framework de front-end que oferece uma ampla gama de ferramentas e componentes para design responsivo.</p> </h3>
+    <div class="container">
+        <img src="img/imgFoundation.jfif">
+    </div>
+    <h3>3.	CSS Grid e Flexbox: <p></p>Embora não sejam frameworks específicos, CSS Grid e Flexbox são recursos poderosos do CSS para criar layouts responsivos de forma mais flexível e eficiente.</h3>
+    <div class="container">
+        <img src="img/imgCSSFlex.png">
+    </div>
+    <h3>4.	Materialize CSS: <p></p>Baseado nas diretrizes de design do Material Design do Google, o Materialize CSS é um framework que oferece componentes e estilos responsivos inspirados no Material Design.</h3>
+    <div class="container">
+        <img src="img/imgMaterialize.jfif">
+    </div>
+    <h3>5.	Tailwind CSS: <p></p>Tailwind CSS é uma estrutura de utilitários CSS altamente configurável que permite criar designs responsivos sem escrever CSS personalizado. Ele oferece uma abordagem mais "low-level" para o design responsivo, permitindo maior controle sobre o layout e estilos.</h3>
+    <div class="container">
+        <img src="img/imgTailWind.jfif">
+    </div>
+    <h2>Diferença entre design responsivo e design adaptativo</h2>
+    <div class="container">
+        <img src="img/imgAdapitativevsResponsive.jfif">
+    </div>
+    <h3>Design adaptativo: </h3><p>É uma abordagem de design em que um layout de site é personalizado especificamente para diferentes tamanhos de tela.</p>
+    <h3>Design responsivo: </h3><p>Busca a adaptabilidade, oferecendo uma experiência de visualização otimizada para uma ampla variedade de dispositivos.</p>
+    <p>O design responsivo é frequentemente a escolha preferida para muitos desenvolvedores de sites devido à sua versatilidade e capacidade de oferecer uma experiência de usuário consistente em um grande número de dispositivos.
+    No entanto, o design adaptativo ainda tem suas vantagens. Ele pode proporcionar uma experiência de usuário mais personalizada em determinados dispositivos, se for essa a necessidade do projeto.
+    Em suma, a escolha entre design responsivo e design adaptativo será fortemente influenciada pelas necessidades específicas do projeto e pelo público-alvo.
+    </p>
+    <h2>Bibliografia: </h2>
+    <p>SPAGNUOLO, R. Design Responsivo: O que é e por que é fundamental na loja online. Disponível em: <https://blog.lojaintegrada.com.br/design-responsivo-o-que-e/#:~:text=Design%20Responsivo%3A%20O%20que%20%C3%A9%20e%20por%20que,...%205%20Melhorando%20a%20Experi%C3%AAncia%20do%20Usu%C3%A1rio%20>. Acesso em: 28 fev. 2024.</p>
+    <p>HTTPS://WWW.FACEBOOK.COM/AGIWORK. Responsividade: O que é e por que é tão importante? Disponível em: <https://www.agiwork.com.br/artigo/o-que-e-responsividade-e-por-que-e-importante#:~:text=Responsividade%2C%20ou%20design%20responsivo%2C%20%C3%A9%20uma%20abordagem%20de,unidades%20relativas%20%28%25%29%20e%20aplicam%20consultas%20de%20m%C3%ADdia.>. Acesso em: 28 fev. 2024.</p>
+   
+</section>    
+<script>
+    function modoescuro() {
+        const body = document.body;
+
+        // Toggle entre dark mode e white mode
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+        } else {
+            body.classList.add('dark-mode');
+        }
+    }
+</script>
+</body>
+</html>
