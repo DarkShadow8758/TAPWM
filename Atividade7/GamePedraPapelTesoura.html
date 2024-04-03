@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo: Pedra, papel ou tesoura</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>Jogo: Pedra, papel ou tesoura</h1>
+
+<div>
+    <button onclick="jogo('pedra')">Pedra</button>
+    <button onclick="jogo('papel')">Papel</button>
+    <button onclick="jogo('tesoura')">Tesoura</button>
+</div>
+
+<div id="resultado"></div>
+
+<script>
+function jogo(usuarioEscolha) {
+    const opcoes = ['pedra', 'papel', 'tesoura'];
+    const computadorEscolha = opcoes[Math.floor(Math.random() * 3)];
+
+    const resultadoElemento = document.getElementById('resultado');
+
+    resultadoElemento.innerHTML = 'Usuário escolheu: ' + usuarioEscolha + '<br>';
+    resultadoElemento.innerHTML += 'Computador escolheu: ' + computadorEscolha + '<br>';
+
+    if (usuarioEscolha === computadorEscolha) {
+        resultadoElemento.innerHTML += 'Empate!';
+    } else if (
+        (usuarioEscolha === 'pedra' && computadorEscolha === 'tesoura') ||
+        (usuarioEscolha === 'tesoura' && computadorEscolha === 'papel') ||
+        (usuarioEscolha === 'papel' && computadorEscolha === 'pedra')
+    ) {
+        resultadoElemento.innerHTML += 'Usuário venceu! ' + usuarioEscolha + ' ganha de ' + computadorEscolha + '.';
+    } else {
+        resultadoElemento.innerHTML += 'Computador venceu! ' + computadorEscolha + ' ganha de ' + usuarioEscolha + '.';
+    }
+}
+</script>
+
+</body>
+</html>
