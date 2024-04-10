@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // total de idade / por quantidade de pessoas
+        var pessoas = 5;
+        var totalI = 0;
+        var idadeV = 0;
+        var idadeN = 200;
+        var sexoF = 0;
+        var sexoM = 0;
+        var pessimo = 0;
+        var porcentagem = 0;
+        var a = 0;
+        for(var i =0; i < 5; i++)
+        {
+            var idade = parseInt(prompt("Digite sua idade: "));
+            //var sexo = parseInt(prompt("Digite o número correspondente ao seu sexo (1 = Feminino, 2 = Masculino)"));
+            //var opiniao = parseInt(prompt("Digite o número correspondente a sua opinião (ótimo = 4, bom = 3, regular = 2, péssimo = 1)"));
+           // var totalI = totalI + idade;
+           if (idadeV < idade)
+           {
+                idadeV = idade;
+           }
+           if (idadeN > idade)
+           {
+                idadeN = idade;
+           }
+            /*if (sexo == 1)
+            {
+                sexoF += 1;
+            }
+            else if (sexo == 2)
+            {
+                sexoM +=1;
+            }
+            if (opiniao == 1)
+            {
+                pessimo += 1;
+            }
+            if (opiniao == 4 || opiniao == 3)
+            {
+                a += 1;
+            }
+           porcentagem = a / pessoas *100;
+           */
+            
+        }
+        //var mediaI = totalI / pessoas;
+        
+       // alert("Média de idade: " + mediaI);
+       // alert("Homens: " + sexoM + "Mulheres: " + sexoF);
+        //alert("O total de pessoas que responderam péssimo foi " + pessimo);
+        //alert("A porcentagem de pessoas que responderam ótimo e bom foi: " +porcentagem+"%")
+        alert("idade nova: " + idadeN + "idade velha: " + idadeV);
+    </script>
+</body>
+</html>
