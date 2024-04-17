@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        var a = parseFloat(prompt("Digite o valor de A: "));
+        var b = parseFloat(prompt("Digite o valor de B: "));
+        var c = parseFloat(prompt("Digite o valor de C: "));
+
+        if (isNaN(a) || isNaN(b) || isNaN(c))
+        {
+            alert("Digite apenas números válidos!!!");
+        } 
+        else 
+        {
+            var diffAB = Math.abs(a - b);
+            var diffAC = Math.abs(a - c);
+            var diffBC = Math.abs(b - c);
+        }
+
+        if (diffAB < c && diffAC < b && diffBC < a)
+        {
+            if(a === b && b === c)
+            {
+                alert("É um triângulo equilátero.")
+            }
+            else if (a === b || b === c || a === c)
+            {
+                alert("É um triângulo isóceles.")
+            }
+            else
+            {
+                alert("É um triângulo escaleno.")
+            }
+        }
+        else 
+        {
+            alert("Não é possível formar um triângulo com esses valores.")
+        }
+    </script>
+</body>
+</html>
