@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Funções</title>
+</head>
+<body>
+    <script>
+        //Função declarada
+        alert(soma(1,1));
+        function soma(num1, num2)
+        {
+            
+            return num1 + num2;
+        }
+        alert(soma(2,3))
+        //ou
+        var s = soma(2,3);
+        alert(s);
+
+        //expressao de função
+        var soma1 = function(num1, num2)
+        {
+            return num1 + num2
+        }
+        alert(soma1(2,3))
+        function alo()
+        {
+            return "Nº Argumentos: " + arguments.length + "\n" + arguments[0] + " " + arguments[1];
+        }
+        var teste = alo("Sr(a)", "Seu nome")
+        alert(teste)
+    </script>
+    
+   
+</body>
+</html>
