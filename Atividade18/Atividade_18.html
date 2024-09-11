@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 18</title>
+    <style>p {text-align: center;} div{text-align: center;}</style>
+</head>
+<body>
+
+    <h2>Formulário</h2>
+    <form name="formulario" onsubmit="return validar()">
+
+        <label for="nome">Nome</label><br>
+        <input type="text" name="nome"  placeholder="Ex: Joao Silva Morais"><br>
+        
+        <label for="email">Email</label><br>
+        <input type="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"><br>
+
+        <label for="coment">Comentário</label><br>
+        <input type="text" name="coment" >
+ 
+        <div>
+            <h1>Pesquisa</h1>
+            <p>Primeira vez neste site?</p>
+            <input type="radio" name="radio1" id="checkSim" value="Sim">
+            <label for="radio1">Sim</label>
+            <input type="radio" name="radio2" id="checkNao" value="nao">
+            <label for="radio2">Não</label><br>
+
+            <input type="submit">
+        </div>
+    </form>
+    <script>    
+        function validar() {
+            const form = document.forms["formulario"];
+
+            const nome = form.elements["nome"].value;
+            if (nome.length < 10) {
+                alert("O nome deve ter pelo menos 10 caracteres.");
+                return false;
+            }
+            
+            const email = form.elements["email"].value;
+            if (!email.includes("@") || !email.includes(".")){
+                alert("O email deve conter '@' e '.'");
+                return false;
+            }
+
+            const coment = form.elements["coment"].value;
+            if (coment.length < 20){
+                alert("O comentário deve ter pelo menos 20 caracteres.");
+                return false;
+            }
+            const checkBoxSim = document.getElementById("checkSim");
+            const checkBoxNao = document.getElementById("checkNao");
+
+            if(checkBoxSim.checked){
+                alert("Volte sempre à esta página!");
+            } else if(checkBoxNao .checked){
+                alert("Que bom que você voltou a visitar esta página!");
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
